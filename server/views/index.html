@@ -1,0 +1,105 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+    <title>Reese's Cup Taste Test</title>
+
+    <link rel="stylesheet" href="/index.css" type="text/css" media="screen" charset="utf-8"/>
+
+    <script type="text/javascript" charset="utf-8"
+    src="/jquery.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="/socket.io/socket.io.js"></script>
+    <script type="text/javascript" charset="utf-8" src="/index.js"></script>
+
+</head>
+<body>
+<img class="bg" src="/bg-2.png" />
+<div id="container">
+    <!--<img id="graph-image" src="/graph.png" />-->
+    {{#canVote}}
+    <div id="vote-area" class="lower-area">
+        <img class="bg" src="/vote-area.png" />
+        <span class="prompt" id="prompt-one">Indicate your <span
+                class="green">favorite</span> variety:</span>
+        <span class="prompt" id="prompt-two">Indicate your <span
+                class="red">least favorite</span> Variety:</span>
+        <div id="mini-button" class="cup-button" cupName="mini">
+            Mini
+        </div>
+        <div id="miniature-button" class="cup-button" cupName="miniature">
+            Miniature
+        </div>
+        <div id="full-button" class="cup-button" cupName="full">
+            Full
+        </div>
+        <div id="big-button" class="cup-button" cupName="big">
+            Big Cup
+        </div>
+    </div>
+    <img src="/big-cup.png" id="big-image" class="cup-image"/>
+    <img src="/full-cup.png" id="full-image" class="cup-image"/>
+    <img src="/miniature-cup.png" id="miniature-image" class="cup-image"/>
+    <img src="/mini-cup.png" id="mini-image" class="cup-image"/>
+    {{/canVote}}
+    <div id="results-area" class="lower-area">
+        <img class="bg" src="/results-area.png" />
+        <div id="results-title">
+            Results to Date
+        </div>
+        <div class="cup-column" id='mini-column'>
+            <div id="mini-results-label" class="results-label">
+                Mini
+            </div>
+            <div id="mini-best-votes" class="best-votes">
+                {{votes.mini.best}}
+            </div>
+            <div id="mini-worst-votes" class="worst-votes">
+                {{votes.mini.worst}}
+            </div>
+        </div>
+        <div class="cup-column" id='miniature-column'>
+            <div id="miniature-results-label" class="results-label">
+                Miniature
+            </div>
+            <div id="miniature-best-votes" class="best-votes">
+                {{votes.miniature.best}}
+            </div>
+            <div id="miniature-worst-votes" class="worst-votes">
+                {{votes.miniature.worst}}
+            </div>
+        </div>
+        <div class="cup-column" id='full-column'>
+            <div id="full-results-label" class="results-label">
+                Full
+            </div>
+            <div id="full-best-votes" class="best-votes">
+                {{votes.full.best}}
+            </div>
+            <div id="full-worst-votes" class="worst-votes">
+                {{votes.full.worst}}
+            </div>
+        </div>
+        <div class="cup-column" id='big-column'>
+            <div id="big-results-label" class="results-label">
+                Big Cup
+            </div>
+            <div id="big-best-votes" class="best-votes">
+                {{votes.big.best}}
+            </div>
+            <div id="big-worst-votes" class="worst-votes">
+                {{votes.big.worst}}
+            </div>
+        </div>
+    </div>
+    <div id="countdown">
+        <div id="countdown-label">
+            Submitting in
+        </div>
+        <div id="countdown-number">
+            5
+        </div>
+    </div>
+</div>
+</body>
+</html>

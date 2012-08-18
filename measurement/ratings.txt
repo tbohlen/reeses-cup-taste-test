@@ -1,0 +1,20 @@
+Name mini miniature full big
+Sherline 4 0 1 4
+Bob 4 1 0 0
+Paul Mini
+Alice Miniature/Full Big
+Jimmy Full Mini
+Jim Big Mini
+Lindy Mini/Full
+Turner Miniature Mini
+Margaret Mini
+
+Sherline Big Mini/Full
+Alice Miniature/Full Big
+Lindy Big Mini/Full
+Margaret Big Mini
+Turner Miniature Mini
+Jimmy Full Mini
+Jim Big Mini
+Bob Miniature Mini
+Paul Big Mini
